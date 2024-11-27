@@ -160,7 +160,7 @@ const ViewPolicyQuote = () => {
         getUserQuotes();
         setFiles([]);
         toast.success("Files uploaded and document updated successfully!");
-        ClientQuoteInspectionUploaded(currentUser.data.name, adminEmail, policyType);
+        // ClientQuoteInspectionUploaded(currentUser.data.name, adminEmail, policyType);
       } catch (error) {
         toast.error(`Error updating document: ${error}`);
         console.error("Error updating document: ", error);
@@ -843,11 +843,11 @@ const DropdownPolicy = ({ popup_data }) => {
     try {
       const data = { ...changeData, changesAnswer };
       await addDoc(collection(db, "policy_changes"), data);
-      ClientQuotePolicyChangeMail(
-        currentUser.data?.name,
-        currentUser.data?.email,
-        changeData.qsr_type
-      );
+      // ClientQuotePolicyChangeMail(
+      //   currentUser.data?.name,
+      //   currentUser.data?.email,
+      //   changeData.qsr_type
+      // );
       closechangeModal();
       closeviewModal();
       toast.success("Changes submitted!");
@@ -861,11 +861,11 @@ const DropdownPolicy = ({ popup_data }) => {
     try {
       const data = { ...cancelModalData, type: "cancel" };
       await addDoc(collection(db, "cancel_policies"), data);
-      ClientQuotePolicyCancelMail(
-        currentUser.data?.name,
-        currentUser.data?.email,
-        cancelModalData.qsr_type
-      );
+      // ClientQuotePolicyCancelMail(
+      //   currentUser.data?.name,
+      //   currentUser.data?.email,
+      //   cancelModalData.qsr_type
+      // );
       closecancelModal();
       closeviewModal();
       toast.success("Cancel request submitted!");
