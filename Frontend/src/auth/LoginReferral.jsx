@@ -7,8 +7,8 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 import { CircularProgress } from "@mui/material";
 
 const LoginReferral = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("referal@referal.com");
+  const [password, setPassword] = useState("123456");
   const [error, setError] = useState("");
   const [Loader, setLoader] = useState(false);
 

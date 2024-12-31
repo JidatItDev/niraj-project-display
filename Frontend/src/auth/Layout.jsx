@@ -36,6 +36,11 @@ const Layout = () => {
             </svg>
           </button>
         </Link>
+        <Link to="admin">
+          <button className="absolute text-white rounded-[20px] bg-white/20 shadow-lg isolate backdrop-blur-3xl px-3 py-3 transition-all ease-in-out delay-100  hover:ring-2 right-[50px] top-[20px]">
+            login as admin
+          </button>
+        </Link>
         <Outlet />
       </div>
     </>

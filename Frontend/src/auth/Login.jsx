@@ -8,8 +8,8 @@ import { db } from "../../db";
 import { CircularProgress } from "@mui/material";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("client@client.com");
+  const [password, setPassword] = useState("123456");
   const [error, setError] = useState("");
   const [Loader, setLoader] = useState(false);
 
